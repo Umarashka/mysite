@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^polls/', include('polls.urls')),
+    url(r'^', include('polls.urls')),
     url(r'^polls/', include('products.urls')),
     url(r'^polls/', include('orders.urls')),
     url(r'^admin/', admin.site.urls),
-]
+] \
+                + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+                + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,3 +1,7 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
 li a {
     color: #e2e2e2;
 }
@@ -8,4 +12,53 @@ li a {
 
 .m-t-250 {
     margin-top: 250px;
+}
+
+.f {
+    position: absolute;
+    bottom: 10px;
+    left: 125px;
+}
+
+.section-top {
+    background: #cb3340;
+    width: 100%;
+    left: 0;
+    position: absolute;
+}
+
+.product-item {
+    height: 540px;
+    color: #646464;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    position: relative;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-name {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.add-to-card-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 40px;
+}
+
+.product-img {
+    height: 275px;
+}
+
+.t-a-c {
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+.price {
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
 }

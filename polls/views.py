@@ -6,6 +6,7 @@ from django.views import generic
 from .models import Choice, Question, Article
 from django.utils import timezone
 from .forms import SubscriberForm, LoginForm, ContactForm
+from products.models import ProductImage
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.mail import send_mail, BadHeaderError
@@ -79,6 +80,11 @@ def form(request):
         new_form = form.save()
 
     return render(request, 'polls/form.html', locals())
+
+
+def home(request):
+    products_images = ProductImage.objects.filter(is_active=True, is_main=True)
+    return render(request, 'polls/home.html', locals())
 
 
 def index1(request):
