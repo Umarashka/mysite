@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^', include('polls.urls')),
     url(r'^polls/', include('products.urls')),
     url(r'^polls/', include('orders.urls')),
+    url(r'^library/', include('library.urls')),
     url(r'^admin/', admin.site.urls),
 ] \
                 + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \

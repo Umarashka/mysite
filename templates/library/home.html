@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{#    <div class="section-top">#}
+{#        <img src="{% static 'img/slider0.jpg' %}" class="img-responsive" alt="">#}
+{#    </div>#}
+
+    <div class="section m-t-35">
+        <div class="container">
+            <div class="row">
+                {% for material_image in materials_images %}
+                    <div class="col-lg-4">
+                        <div class="product-item">
+                            <div class="t-a-c">
+                                <img src="{{ material_image.image.url }}" alt="" class="img-responsive product-img">
+                            </div>
+{#                            <h4 class="product-name">{{ material_image.product.name }}</h4>#}
+                            <p>
+{#                                {{ material_image.product.description|truncatechars_html:75 }}#}
+                            </p>
+                            <div>
+{#                                <h3 class="price">{{ material_image.product.price }} тг</h3>#}
+                            </div>
+                            <div class="add-to-card-btn">
+                                <button class="btn btn-primary">
+{#                                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> #}
+                                    Добавить в личную полку
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

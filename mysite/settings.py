@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'polls',
     'products',
     'orders',
+    'library',
 ]
 
 MIDDLEWARE_CLASSES = [

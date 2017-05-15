@@ -84,7 +84,7 @@ def form(request):
 
 def home(request):
     products_images = ProductImage.objects.filter(is_active=True, is_main=True)
-    return render(request, 'polls/home.html', locals())
+    return render(request, 'polls/../templates/library/home.html', locals())
 
 
 def index1(request):
